@@ -1,2 +1,16 @@
-# Personal-Business-Budget-Tracker
-A personal and business budget tracker built with Python and Streamlit. Track income and expenses by category, switch between accounts, and view an interactive dashboard with spending breakdowns and monthly trends — all backed by a local SQLite database.
+# Budget Tracker (Python / Streamlit)
+
+
+## Stack
+
+- **Streamlit** — UI and app framework (multipage: `Home.py` for Transactions, `pages/1_Categories.py` for Categories)
+- **SQLite** (via Python's built-in `sqlite3`) — storage, file lives at `data/budget.db` (gitignored, created automatically on first run)
+- **pandas** — data wrangling for the dashboard charts
+- **Plotly** — charts (pie, line), rendered via `st.plotly_chart`
+
+## Current scope (v1)
+
+- Personal / Business account switcher (sidebar)
+- Category management (create/edit/delete, scoped per account)
+- Manual transaction entry, with inline edit/delete and filtering (date range, category, type, search, sort)
+- Dashboard: income/expense/net summary vs. last month, spending-by-category pie chart, 12-month income/expense trend line
